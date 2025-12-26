@@ -1,0 +1,20 @@
+{
+    "name": "corsairhud-plus-theme",
+    "displayName": "CorsairHUD+",
+    "description": "Drake Corsair inspired theme with orange HUD colors",
+    "version": "1.0.0",
+    "publisher": "drake-corsair",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": ["Themes"],
+    "contributes": {
+        "themes": [
+            {
+                "label": "CorsairHUD+",
+                "uiTheme": "vs-dark",
+                "path": "./themes/corsairhud-plus.json"
+            }
+        ]
+    }
+}

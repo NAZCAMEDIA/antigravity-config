@@ -1,0 +1,19 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# Backup files
+*.backup
+*.bak
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
