@@ -63,14 +63,13 @@ fi
 
 # Install CorsairHUD+ Theme
 echo -e "${ORANGE}🎨 Installing CorsairHUD+ Theme...${NC}"
-THEME_DEST="$ANTIGRAVITY_EXT_DIR/drake-corsair.corsairhud-plus-theme-1.0.0"
-if [ -d "$REPO_DIR/themes/corsairhud-plus" ]; then
-    rm -rf "$THEME_DEST"
-    mkdir -p "$THEME_DEST"
-    cp -r "$REPO_DIR/themes/corsairhud-plus/"* "$THEME_DEST/"
+THEME_VSIX="$REPO_DIR/themes/corsairhud-plus/corsairhud-plus-theme-1.0.0.vsix"
+if [ -f "$THEME_VSIX" ]; then
+    $ANTIGRAVITY_CMD --install-extension "$THEME_VSIX" --force 2>/dev/null
     echo -e "${GREEN}   ✓ CorsairHUD+ theme installed${NC}"
 else
-    echo -e "${RED}   ✗ Theme folder not found${NC}"
+    echo -e "${RED}   ✗ Theme VSIX file not found${NC}"
+    echo -e "${CYAN}   ℹ To create the VSIX: cd themes/corsairhud-plus && vsce package${NC}"
 fi
 
 # Install extensions
