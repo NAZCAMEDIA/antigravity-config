@@ -19,17 +19,17 @@
 ### One-Line Install (macOS)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/antigravity-config/main/scripts/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/NAZCAMEDIA/antigravity-config/main/scripts/install.sh | bash
 ```
 
 ### Manual Install
 
 ```bash
-# Clone the repository
-git clone https://github.com/YOUR_USERNAME/antigravity-config.git
+# Clone repository
+git clone https://github.com/NAZCAMEDIA/antigravity-config.git
 cd antigravity-config
 
-# Run the install script
+# Run install script
 ./scripts/install.sh
 ```
 
@@ -40,6 +40,7 @@ antigravity-config/
 ├── README.md
 ├── themes/
 │   └── corsairhud-plus/          # CorsairHUD+ Theme Extension
+│       ├── corsairhud-plus-theme-1.0.0.vsix  # Pre-built extension package
 │       ├── package.json
 │       └── themes/
 │           └── corsairhud-plus.json
@@ -102,6 +103,18 @@ A dark theme inspired by the Drake Corsair cockpit HUD from Star Citizen:
 - **Documentation Specialist** - Technical writing expert
 - **Frontend Specialist** - React/TypeScript/CSS expert
 - **Test Engineer** - QA and testing focus
+
+## 🎨 Rebuilding the Theme
+
+If you modify the theme files and need to rebuild the .vsix package:
+
+```bash
+cd themes/corsairhud-plus
+npm install -g @vscode/vsce  # Install packaging tool if not present
+vsce package --allow-missing-repository
+```
+
+This will create/update `corsairhud-plus-theme-1.0.0.vsix` which can then be installed.
 
 ## 🔄 Backup Your Config
 
